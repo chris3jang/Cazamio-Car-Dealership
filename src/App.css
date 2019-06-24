@@ -2,32 +2,140 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: block;
+  margin-bottom: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav a { 
+  color: #FFFFFF; 
+  display: block; 
+  padding: 0.5em 1em; 
+  text-decoration: none; 
+  cursor: pointer;
+}
+
+nav a:hover { 
+  color: #DDDDDD; 
+}
+
+nav ul, nav ul li { 
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+nav li { 
+  width: 180px; 
+}
+
+nav > ul { 
+  background: #9BBDD6; 
+}
+nav > ul > li { 
+  display: inline-block; 
+}
+
+.menu-parent { 
+  position: relative; 
+}
+
+.menu-parent: hover {
+  background: #DDDDDD;
+}
+
+.menu-parent:focus .menu,
+.menu-parent:focus-within .menu,
+.menu-parent:hover .menu {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0s;
+}
+
+.menu { 
+  background: #6497B1;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-2em);
+  z-index: -1;
+  transition: all .3s ease-in-out .1s, visibility .3s linear .1s, z-index .3s linear .3s;
+}
+
+.body {
+  display: inline-block;
+  width: 100%;
+}
+
+.body-side {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+}
+
+.displayed {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.rotate-left, .rotate-right {
+  width: 120px;
+  height: auto;
+  margin-bottom: 50px;
+
+  -webkit-filter: opacity(.15);
+  -moz-filter: opacity(.15);
+  -o-filter: opacity(.15);
+  -ms-filter: opacity(.15);
+  filter: opacity(.15);
+}
+
+.rotate-right {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.rotate-left:focus, .rotate-right:focus {
+  outline: none;
+}
+
+.rotate-left:hover, .rotate-right:hover {
+  filter: opacity(.6)
+}
+
+.bottom {
+  background: #9bbdd6;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+h2 {
+  font-family: inherit;
+  margin: 10px 0px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+
+
+
+
+
+
+
+.selectedItem {
+  background:  #005b96;
 }
